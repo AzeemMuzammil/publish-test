@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.yourusername'
+group = 'com.azeemmuzammil'
 version = '0.1.0'
 
 repositories {
@@ -23,7 +23,7 @@ publishing {
     }
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/yourusername/yourrepositoryname")
+            url = uri("https://maven.pkg.github.com/AzeemMuzammil/publish-test")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
