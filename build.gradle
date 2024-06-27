@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.azeemmuzammil'
-version = '0.1.0'
+version = '0.1.1'
 
 repositories {
     mavenCentral()
@@ -19,6 +19,18 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
+        }
+        packageA(MavenPublication) {
+            from components.java
+            groupId = 'com.azeemmuzammil'
+            artifactId = 'package-a'
+            version = '0.1.1'
+        }
+        packageB(MavenPublication) {
+            from components.java
+            groupId = 'com.azeemmuzammil'
+            artifactId = 'package-b'
+            version = '0.1.1'
         }
     }
     repositories {
